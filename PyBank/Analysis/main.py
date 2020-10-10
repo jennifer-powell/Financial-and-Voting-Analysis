@@ -12,19 +12,29 @@ with open(csvpath) as csvfile:
 
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
+    
+    month_count= 0
 
     for row in csvreader:
-       # print(row)
+    #    print(row)
 
 # *The total number of months included in the dataset
     # for row in csvreader:
+    
+        month_count +=1
+    print(f"Total Months:  {month_count}")
+ 
+    # extracting each data row one by one 
+#     for row in csvreader: 
+#         rows.append(row) 
+  
+#     # get total number of rows 
+#     # print("Total no. of rows: %d"%(csvreader.line_num)) 
 
 
-# *The net total amount of "Profit/Losses" over the entire period
-        def sum(row):
-            total_finances= int(row[1]+1)
-            return total_finances
-        print(sum(row))
+# # *The net total amount of "Profit/Losses" over the entire period
+#         for i in range(len(profit_loss)+1):
+#         total.append(profit_loss[i+1]+profit_loss[i])
 
 
 # *The average of the changes in "Profit/Losses" over the entire period
