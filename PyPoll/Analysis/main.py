@@ -13,7 +13,8 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
     vote_count= 0
-    
+    candidate_list = []
+    Number_votes= []
     for row in csvreader:
         #print(row)
 
@@ -24,10 +25,19 @@ with open(csvpath) as csvfile:
 
 # * A complete list of candidates who received votes
     
-    candidate_list.append(row[2])
-    for row in data if row[2] not in list_of_candidates]
-    
-    
+    # candidate_list = []
+    # for row in csvreader:
+
+            candidate = row[2]
+            candidate_list.append(candidate)
+
+            #print(str(candidate_list))
+            if candidate in Number_votes:
+                Number_votes[candidate]= Number_votes[candidate] +1
+            else:
+                Number_votes[candidate]=1
+
+            print(Number_votes[candidate])
 
 
 
