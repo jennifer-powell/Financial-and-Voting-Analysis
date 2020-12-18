@@ -15,29 +15,30 @@ with open(csvpath) as csvfile:
     vote_count= 0
     candidate_list = []
     Number_votes= []
+    vote_percent= []
     for row in csvreader:
         #print(row)
 
 # * The total number of votes cast
     
             vote_count +=1
-    # print(f"Total Votes:  {vote_count}")
+    print(f"Total Votes:  {vote_count}")
 
 # * A complete list of candidates who received votes
     
     # candidate_list = []
     # for row in csvreader:
 
-            candidate = row[2]
-            candidate_list.append(candidate)
+    candidate = row[2]
+    candidate_list.append(candidate)
+    
+    print(str(candidate_list)
+            # if candidate in Number_votes:
+            #     Number_votes[candidate]= Number_votes[candidate] +1
+            # else:
+            #     Number_votes[candidate]=1
 
-            #print(str(candidate_list))
-            if candidate in Number_votes:
-                Number_votes[candidate]= Number_votes[candidate] +1
-            else:
-                Number_votes[candidate]=1
-
-            print(Number_votes[candidate])
+            # print(Number_votes[candidate])
 
 
 
