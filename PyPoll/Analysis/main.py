@@ -38,16 +38,6 @@ with open(csvpath) as csvfile:
     winning= max(Number_votes)
     winner= candidates[Number_votes.index(winning)]
     
-
-    print("-------------------------")
-for i in range(len(candidates)):
-    print(candidates[i] + ": " + str(percent[i]) +"% (" + str(Number_votes[i])+ ")")
-
-
-
-
-
-
     #         if candidate_votes in candidate:
     #             candidate.append(candidate_votes)
     #             set_candidate_votes= set(candidate_votes)
@@ -80,6 +70,11 @@ print(f"Election Results")
 print("---------------------")
 print(f"Total Votes: {vote_count}") 
 print("---------------------")
+print(f"{candidates[0]}: ")
+print(f"{candidates[1]}: ")
+print(f"{candidates[2]}: ")
+print(f"{candidates[3]}: ")
+
 print(f"winner has: {winning}")
 print(f"winner: {winner}")
                  
