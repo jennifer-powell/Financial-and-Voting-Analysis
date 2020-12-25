@@ -4,6 +4,12 @@ import csv
 
 csvpath = os.path.join('..', 'Resources', 'election_data.csv')
 
+vote_count= 0
+candidate_votes =[]
+candidates= []
+Number_votes= []
+vote_percent= 0
+
 with open(csvpath) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -12,27 +18,42 @@ with open(csvpath) as csvfile:
 
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
-    vote_count= 0
-    candidate_list = []
-    Number_votes= []
-    vote_percent= []
+   
     for row in csvreader:
         #print(row)
 
 # * The total number of votes cast
     
             vote_count +=1
-    print(f"Total Votes:  {vote_count}")
 
 # * A complete list of candidates who received votes
-    
-    # candidate_list = []
-    # for row in csvreader:
+            candidate_votes.append(row[2])
 
-    candidate = row[2]
-    candidate_list.append(candidate)
+    for candidate in set(candidate_votes):
+        candidates.append(candidate)
+        votes= candidate_votes.count(candidate)
+        Number_votes.append(votes)
+        percent= (votes/vote_count)*100
+        # vote_percent.append(percent)
+    winning= max(Number_votes)
+    winner= candidates[Number_votes.index(winning)]
     
-    print(str(candidate_list)
+
+    print("-------------------------")
+for i in range(len(candidates)):
+    print(candidates[i] + ": " + str(percent[i]) +"% (" + str(Number_votes[i])+ ")")
+
+
+
+
+
+
+    #         if candidate_votes in candidate:
+    #             candidate.append(candidate_votes)
+    #             set_candidate_votes= set(candidate_votes)
+    #             Number_votes= len(set_candidate_votes)
+    
+    # print(candidate)
             # if candidate in Number_votes:
             #     Number_votes[candidate]= Number_votes[candidate] +1
             # else:
@@ -54,3 +75,11 @@ with open(csvpath) as csvfile:
     #
 
  #print(candidate:, candidate %, (candidate's total vote count))
+
+print(f"Election Results")
+print("---------------------")
+print(f"Total Votes: {vote_count}") 
+print("---------------------")
+print(f"winner has: {winning}")
+print(f"winner: {winner}")
+                 
