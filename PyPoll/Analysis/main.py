@@ -79,3 +79,7 @@ print(f"{candidates[3]}: {round((Number_votes[3]/vote_count)*100, 3)}% ({Number_
 print("---------------------")
 print(f"winner: {winner}")
                  
+
+
+
+PyPollFile= open("PyPolltext.txt", "a" )
