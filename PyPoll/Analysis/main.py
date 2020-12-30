@@ -33,8 +33,9 @@ with open(csvpath) as csvfile:
         candidates.append(candidate)
         votes= candidate_votes.count(candidate)
         Number_votes.append(votes)
-        percent= (votes/vote_count)*100
+        # percent= (votes/vote_count)*100
         # vote_percent.append(percent)
+        percent= (votes/vote_count)*100
     winning= max(Number_votes)
     winner= candidates[Number_votes.index(winning)]
     
@@ -70,11 +71,11 @@ print(f"Election Results")
 print("---------------------")
 print(f"Total Votes: {vote_count}") 
 print("---------------------")
-print(f"{candidates[0]}: ")
-print(f"{candidates[1]}: ")
-print(f"{candidates[2]}: ")
-print(f"{candidates[3]}: ")
+print(f"{candidates[0]}: {round((Number_votes[0]/vote_count)*100, 3)}% ({Number_votes[0]})")
+print(f"{candidates[1]}: {round((Number_votes[1]/vote_count)*100, 3)}% ({Number_votes[1]})")
+print(f"{candidates[2]}: {round((Number_votes[2]/vote_count)*100, 3)}% ({Number_votes[2]})")
+print(f"{candidates[3]}: {round((Number_votes[3]/vote_count)*100, 3)}% ({Number_votes[3]})")
 
-print(f"winner has: {winning}")
+print("---------------------")
 print(f"winner: {winner}")
                  
