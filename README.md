@@ -1,11 +1,11 @@
 # Python--Challenge
 
-- # Overview
+# Overview
    
 
 - ## Programs, Languages and tools
   - Python
-  - reading in CSV to python script
+  - reading in CSV to Python script
   
  ## File Overview
   - ### PyBank
