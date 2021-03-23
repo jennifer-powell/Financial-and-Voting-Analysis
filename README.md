@@ -1,6 +1,6 @@
 # Python--Challenge
 
-- ## Overview
+- # Overview
    
 
 - ## Programs, Languages and tools
@@ -27,7 +27,7 @@
    - The winner of the election based on popular vote.
    
    
-## These are the results for the PyBank Analysis 
+## Results for the PyBank Analysis:
 
 
 ## Financial Analysis
@@ -38,7 +38,7 @@
 - Greatest Increase in Profits: 2/1/2012, $1926159
 - Greatest Decrease in Profits: 9/1/2013, $-2196167
 
-## These are the results for the PyPoll Analysis:
+## Results for the PyPoll Analysis:
 
 ## Election Results
 ---------------------
