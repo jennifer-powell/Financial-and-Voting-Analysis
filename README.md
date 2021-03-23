@@ -6,7 +6,8 @@
 - ## Programs, Languages and tools
   - Python
   - reading in CSV to python script
-- ## File overview
+  
+ ## File Overview
   - ### PyBank
   
     ##### In this challenge, I was tasked with creating a Python script for analyzing the financial records of a company to calculate each of the following:
@@ -26,7 +27,7 @@
    - The winner of the election based on popular vote.
    
    
-   ## These are the results for the PyBank Analysis 
+## These are the results for the PyBank Analysis 
 
 
 ## Financial Analysis
